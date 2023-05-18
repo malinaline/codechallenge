@@ -1,22 +1,37 @@
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import FilmList from "./pages/FilmList";
 
-import NoPage from "./pages/nopage";
-import Navigation from "./components/Navigation";
-//import Home from "./pages/home";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
+const Home = () => <h1>Welcome to the Home page!</h1>;
 
-function App() {
+const Films = () => <FilmList />;
+
+const Film = () => <h1>Welcome to the Film page!</h1>;
+const FilmCharacters = () => <h1>Welcome to the Film Characters page!</h1>;
+const NotFound = () => <h1>404 - Page not found</h1>;
+
+const App = () => {
   return (
-    <BrowserRouter>
-      <Navigation />
+    <Router>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/films">Films</Link>
+          </li>
+        </ul>
+      </nav>
+
       <Routes>
-        <Route path="/filmlist" element={<FilmList />}>
-          <Route path="*" element={<NoPage />} />
-        </Route>
+        <Route path="/" Component={Home} />
+        <Route path="/films" Component={Films} />
+        <Route path="/films/:id" Component={Film} />
+        <Route path="/films/:id/characters" Component={FilmCharacters} />
+        <Route Component={NotFound} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
-}
+};
 
 export default App;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-interface Film {
+ 
+export interface Film {
   title: string;
   episode_id: number;
   director: string;
@@ -9,7 +10,7 @@ interface Film {
   characters: string[];
 }
 
-interface Character {
+export interface Character {
   name: string;
 }
 
