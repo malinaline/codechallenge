@@ -1,19 +1,27 @@
-import FilmList from "./pages/FilmList";
-
+import Home from "./pages/home";
 import NoPage from "./pages/nopage";
 import Navigation from "./components/Navigation";
-//import Home from "./pages/home";
+import MovieDetailsPage from "./components/MovieDetails";
+import CharactersPage from "./components/Characters";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
+
+
+//usehistory
 
 function App() {
   return (
     <BrowserRouter>
       <Navigation />
       <Routes>
-        <Route path="/filmlist" element={<FilmList />}>
-          <Route path="*" element={<NoPage />} />
-        </Route>
+        <Route path="*" element={<NoPage />} />
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/:id" element={<MovieDetailsPage />}></Route>
+        <Route path="/:id/people/" element={<CharactersPage />}></Route>
+        <Route
+          path="/:id/people/" element=<p>bonus: show character-info</p>
+        ></Route>
+        <Route path="/search" element=<p>search</p>></Route>
+        <Route path="/" element={<Home />}></Route>
       </Routes>
     </BrowserRouter>
   );

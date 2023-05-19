@@ -1,7 +1,13 @@
-import React from "react";
+import Movies from "../components/Movies";
 
 const Home = () => {
-  return <div>welocome to homepage!</div>;
+  return (
+    <div>
+      <Movies />;
+    </div>
+  );
 };
 
 export default Home;
+
+//gör filmlist till component, importera hit, och specificera i app router

@@ -1,7 +1,7 @@
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
 function Navigation() {
-  const [category, setCategory] = useState("displaymovies"); // Initial category state
+  // const [category, setCategory] = useState("displaymovies"); // Initial category state
 
   // Filter data by category
   // const filteredData = developersData.filter((developer) => {
@@ -12,17 +12,23 @@ function Navigation() {
   //   }
   // });
 
+  // använd navlinks istället för links
+
   return (
     <nav className="nav">
-      <h1>
-        FIND YOUR <b>MOVIES</b>
-      </h1>{" "}
       <Link
         className="link"
-        to="/filmlist"
-        onClick={() => setCategory("displaymovies")}
+        to="/"
+        // onClick={() => setCategory("displaymovies")}
       >
-        ❤ All movies
+        home|
+      </Link>
+      <Link
+        className="link"
+        to="/search"
+        // onClick={() => setCategory("displaymovies")}
+      >
+        search
       </Link>
     </nav>
   );
