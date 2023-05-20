@@ -17,8 +17,9 @@ function Navigation() {
 
   const isMobile = width < 1025;
 
-  // Check if width is greater that 1025px
-  // if true, render desktop navigation
+  const closeMobileMenu = () => {
+    setIsOpen(false);
+  };
 
   return (
     <NavStyled isMobile={isMobile}>
@@ -26,11 +27,14 @@ function Navigation() {
         <NavInner isMobile={isMobile}>
           <NavList isMobile={isMobile}>
             <NavItem>
-              <NavLink to="/">home|</NavLink> 
-
+              <NavLink to="/" onClick={closeMobileMenu}>
+                home|
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/search">search</NavLink>
+              <NavLink to="/search" onClick={closeMobileMenu}>
+                search
+              </NavLink>
             </NavItem>
           </NavList>
         </NavInner>
@@ -41,10 +45,14 @@ function Navigation() {
             <NavContainerMobile>
               <NavList isMobile={isMobile}>
                 <NavItem>
-                  <NavLink to="/">home</NavLink>
+                  <NavLink to="/" onClick={closeMobileMenu}>
+                    home
+                  </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink to="/search">search</NavLink>
+                  <NavLink to="/search" onClick={closeMobileMenu}>
+                    search
+                  </NavLink>
                 </NavItem>
               </NavList>
             </NavContainerMobile>
@@ -56,10 +64,3 @@ function Navigation() {
 }
 
 export default Navigation;
-
-/* 
-
-Gör NAV dynamisk. På mobile ska det det finnas en knapp i vänstra hörnet.
-
-
-*/
