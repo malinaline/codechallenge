@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import { MoviesStyled} from "./Movies.styled";
+
 export interface Film {
   title: string;
   episode_id: number;
@@ -9,8 +11,6 @@ export interface Film {
   release_date: string;
   characters: string[];
 }
-
-//wrappa filmarna i links
 
 const Movies = () => {
   const [films, setFilms] = useState<Film[]>([]);
@@ -30,7 +30,7 @@ const Movies = () => {
   }, []);
 
   return (
-    <div>
+    <MoviesStyled>
       <h1>Films</h1>
       <ul>
         {films.map((film) => (
@@ -39,7 +39,7 @@ const Movies = () => {
           </Link>
         ))}
       </ul>
-    </div>
+    </MoviesStyled>
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { StyledDetails } from "./StyledDetails";
 
 interface Movie {
   title: string;
@@ -33,16 +34,15 @@ const MovieDetailsPage: React.FC = () => {
   }
 
   return (
-    <div>
-      <h2>{`Movie Title: ${movie.title}`}</h2>
+    <StyledDetails>
+      <h1>{`${movie.title}`}</h1>
       <p>{`Episode ID: ${movie.episode_id}`}</p>
       <p>{`Director: ${movie.director}`}</p>
       <p>{`Release Date: ${movie.release_date}`}</p>
-      <p>{`Release Date: ${movie.characters}`}</p>
 
       {/* Link to CharactersPage */}
-      <Link to={`/${id}/characters`}>Characters</Link>
-    </div>
+      <Link to={`/${id}/characters`}> Show characters</Link>
+    </StyledDetails>
   );
 };
 

@@ -9,9 +9,6 @@ Complete the following tasks to achieve MVP:
 ● Create a page to list characters. This page should be empty to start with, and only get
 characters added as the user clicks into the different movies. This page should only list characters belonging to movies that the user has clicked on.
 
-
-
-
-- går inte att fetcha characters, till ny sida?
-- skapa
-
+-
+- gör en styled-component för mobile och en för desktop
+- mobileview: meny ska försvinna on click
