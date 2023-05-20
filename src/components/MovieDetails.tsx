@@ -38,9 +38,10 @@ const MovieDetailsPage: React.FC = () => {
       <p>{`Episode ID: ${movie.episode_id}`}</p>
       <p>{`Director: ${movie.director}`}</p>
       <p>{`Release Date: ${movie.release_date}`}</p>
+      <p>{`Release Date: ${movie.characters}`}</p>
 
       {/* Link to CharactersPage */}
-      <Link to={`/${id}/people`}>Characters</Link>
+      <Link to={`/${id}/characters`}>Characters</Link>
     </div>
   );
 };

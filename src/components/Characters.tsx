@@ -15,20 +15,13 @@ const CharactersPage: React.FC = () => {
   useEffect(() => {
     const fetchCharacters = async () => {
       try {
-        const response = await fetch(
-          `https://swapi.dev/api/films/${id}/people`
-        );
+        const response = await fetch(`https://swapi.dev/api/films/${id}`);
         const data = await response.json();
-        const characterUrls: string[] = data.results;
-
-        const characterPromises = characterUrls.map(async (url: string) => {
-          const characterResponse = await fetch(url);
-          const characterData = await characterResponse.json();
-          return characterData;
-        });
-
-        const characterDetails = await Promise.all(characterPromises);
-        setCharacters(characterDetails);
+        const characterPromises = data.characters.map((url: string) =>
+          fetch(url).then((response) => response.json())
+        );
+        const characterData = await Promise.all(characterPromises);
+        setCharacters(characterData);
       } catch (error) {
         console.error("Error fetching characters:", error);
       }
@@ -49,7 +42,6 @@ const CharactersPage: React.FC = () => {
           <h3>{character.name}</h3>
           <p>{`Height: ${character.height}`}</p>
           <p>{`Mass: ${character.mass}`}</p>
-          {/* Add more character details to display */}
         </div>
       ))}
     </div>

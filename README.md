@@ -8,3 +8,10 @@ Complete the following tasks to achieve MVP:
 ● When a user clicks on a movie, a single movie page should display data from that movie.
 ● Create a page to list characters. This page should be empty to start with, and only get
 characters added as the user clicks into the different movies. This page should only list characters belonging to movies that the user has clicked on.
+
+
+
+
+- går inte att fetcha characters, till ny sida?
+- skapa
+
