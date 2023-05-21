@@ -21,10 +21,6 @@ Bonus
 
 - [@malinaline](https://www.github.com/malinaline)
 
-## Screenshot
-
-Coming soon..
-
 ## Run Locally
 
 Clone the project
@@ -51,9 +47,9 @@ Start on Localhost
   npm start
 ```
 
-## Watch Live at Netlify
+## Watch live at Netlify
 
-Coming soon...
+https://starwarsmovieapp.netlify.app/
 
 ## Tech Stack
 
