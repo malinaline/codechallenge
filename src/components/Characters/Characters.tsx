@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { StyledCharacters } from "./StyledCharacters";
+import { Link } from "react-router-dom";
 import LoadingPage from "../Loader";
 
 interface Character {
@@ -50,6 +51,8 @@ const CharactersPage: React.FC = () => {
           <h3>{character.name}</h3>
         </div>
       ))}
+      {/* Link to CharactersPage */}
+      <Link to={`/${id}`}> ← Back to Movie Details</Link>
     </StyledCharacters>
   );
 };

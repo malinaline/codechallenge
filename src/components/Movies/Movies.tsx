@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { MoviesStyled } from "./Movies.styled";
+import LoadingPage from "../Loader";
 
 export interface Film {
   title: string;
@@ -14,6 +15,7 @@ export interface Film {
 
 const Movies = () => {
   const [films, setFilms] = useState<Film[]>([]);
+  const [isLoading, setIsLoading] = useState(true); // Add a loading state
 
   useEffect(() => {
     const fetchFilms = async () => {
@@ -21,6 +23,7 @@ const Movies = () => {
         const response = await fetch("https://swapi.dev/api/films/");
         const data = await response.json();
         setFilms(data.results);
+        setIsLoading(false); // Set isLoading to false after films are fetched
       } catch (error) {
         console.log("Error fetching films:", error);
       }
@@ -31,14 +34,19 @@ const Movies = () => {
 
   return (
     <MoviesStyled>
-      <h1>Films</h1>
-      <ul>
-        {films.map((film) => (
-          <Link key={film.episode_id} to={film.episode_id.toString()}>
-            {film.title}
-          </Link>
-        ))}
-      </ul>
+      <h1>Movies</h1>
+      <h2>Please select a title below to show more details</h2>
+      {isLoading ? (
+        <LoadingPage /> // Render the loading component if isLoading is true
+      ) : (
+        <ul>
+          {films.map((film) => (
+            <Link key={film.episode_id} to={film.episode_id.toString()}>
+              {film.title}
+            </Link>
+          ))}
+        </ul>
+      )}
     </MoviesStyled>
   );
 };

@@ -48,7 +48,15 @@ const MovieDetailsPage: React.FC = () => {
       <p>{`Release Date: ${movie.release_date}`}</p>
 
       {/* Link to CharactersPage */}
-      <Link to={`/${id}/characters`}> Show characters ➝</Link>
+      <ul>
+        <li>
+          <Link to={`/${id}/characters`}> Show Characters →</Link>
+        </li>
+        <li>
+          {" "}
+          <Link to={`/`}> ← Back to Movies </Link>
+        </li>
+      </ul>
     </StyledDetails>
   );
 };
