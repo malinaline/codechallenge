@@ -15,7 +15,8 @@ MVP:
 
 - [@malinaline](https://www.github.com/malinaline)
 
-## Screenshot
+## Screenshot![screenshot](https://github.com/malinaline/stampen/assets/75427957/615a8b7b-6b2a-4622-9c88-72b7b0369d72)
+
 
 ## Run Locally
 
