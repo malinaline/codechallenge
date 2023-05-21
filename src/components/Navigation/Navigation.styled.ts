@@ -16,26 +16,10 @@ export const NavStyled = styled.nav<NavProps>`
   align-items: center;
 `;
 
-export const NavInner = styled.div<NavProps>`
-  width: 100%;
-  padding-inline: ${({ isMobile }) => (isMobile ? "0" : "20px")};
-
-  button {
-    background-color: transparent;
-    color: var(--white);
-    border: none;
-    cursor: pointer;
-    padding-top: 1px;
-    padding-left: 10px;
-    font-size: 40px;
-  }
-`;
-
 export const NavList = styled.ul<NavProps>`
   display: flex;
-  align-items: center;
   flex-direction: ${({ isMobile }) => (isMobile ? "column" : "row")};
-  justify-content: ${({ isMobile }) => (isMobile ? "center" : "flex-end")};
+  align-items: center;
 `;
 
 export const NavItem = styled.li`
@@ -48,10 +32,12 @@ export const NavLink = styled(Link)`
   color: var(--white);
 `;
 
-export const NavContainerMobile = styled.div`
-  position: absolute;
+export const ListContainerMobile = styled.div`
+  position: fixed;
   top: 56px;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: calc(100vh - 56px);
   background-color: var(--ultraViolet);
@@ -59,4 +45,33 @@ export const NavContainerMobile = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const WrapperMobile = styled.div`
+  display: flex;
+  @media screen and (min-width: 1025px) {
+    display: none;
+  }
+`;
+
+export const WrapperDesktop = styled.div`
+  display: none;
+  margin-inline-start: auto;
+  padding-inline: 10px;
+  @media screen and (min-width: 1025px) {
+    display: flex;
+  }
+  a {
+    padding-inline: 3px;
+  }
+`;
+
+export const MenuToggler = styled.button`
+  background-color: transparent;
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  padding-top: 1px;
+  padding-left: 10px;
+  font-size: 40px;
 `;

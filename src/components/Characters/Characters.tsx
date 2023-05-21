@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { StyledCharacters } from "./StyledCharacters";
+import { CharactersStyled } from "./Characters.styled";
 import { Link } from "react-router-dom";
 import LoadingPage from "../LoadingSpinner/LoadingSpinner";
 
@@ -13,6 +13,7 @@ interface Character {
 
 const CharactersPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
+  const [movieTitle, setMovieTitle] = useState<string | null>(null);
   const [characters, setCharacters] = useState<Character[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -26,6 +27,7 @@ const CharactersPage: React.FC = () => {
         );
         const characterData = await Promise.all(characterPromises);
         setCharacters(characterData);
+        setMovieTitle(data.title);
         setIsLoading(false);
       } catch (error) {
         console.error("Error fetching characters:", error);
@@ -44,8 +46,8 @@ const CharactersPage: React.FC = () => {
   }
 
   return (
-    <StyledCharacters>
-      <h2>Characters</h2>
+    <CharactersStyled>
+      <h2>{`Characters from ${movieTitle}`}</h2>
       {characters.map((character, index) => (
         <div key={index}>
           <p>{character.name}</p>
@@ -53,7 +55,7 @@ const CharactersPage: React.FC = () => {
       ))}
       {/* Link to CharactersPage */}
       <Link to={`/${id}`}> ← Back to Movie Details</Link>
-    </StyledCharacters>
+    </CharactersStyled>
   );
 };
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { StyledDetails } from "./StyledDetails";
+import { DetailsStyled } from "./MovieDetails.styled";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 interface Movie {
@@ -41,7 +41,7 @@ const MovieDetailsPage: React.FC = () => {
   }
 
   return (
-    <StyledDetails>
+    <DetailsStyled>
       <h2>{`${movie.title}`}</h2>
       <p>{`Episode: ${movie.episode_id}`}</p>
       <p>{`Director: ${movie.director}`}</p>
@@ -57,7 +57,7 @@ const MovieDetailsPage: React.FC = () => {
           <Link to={`/`}> ← Back to Movies </Link>
         </li>
       </ul>
-    </StyledDetails>
+    </DetailsStyled>
   );
 };
 

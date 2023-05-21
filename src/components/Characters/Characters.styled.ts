@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledDetails = styled.div`
+export const CharactersStyled = styled.div`
   color: var(--spaceCadet);
   padding: 10px;
   text-align: center;

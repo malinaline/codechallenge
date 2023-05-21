@@ -36,13 +36,13 @@ const Movies = () => {
     <MoviesStyled>
       <h1>Starwars Movie App</h1>
       <h2>Movies</h2>
-      <h3>Please select a title below to show more details</h3>
+      <h3>Please select a title below to show details.</h3>
       {isLoading ? (
         <LoadingSpinner /> // Render the loading component if isLoading is true
       ) : (
         <ul>
-          {films.map((film) => (
-            <Link key={film.episode_id} to={film.episode_id.toString()}>
+          {films.map((film, index) => (
+            <Link key={film.episode_id} to={`${index + 1}`}>
               {film.title}
             </Link>
           ))}
