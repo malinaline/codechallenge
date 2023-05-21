@@ -35,7 +35,7 @@ const Movies = () => {
       <ul>
         {films.map((film) => (
           <Link key={film.episode_id} to={film.episode_id.toString()}>
-            {film.title} ➝
+            {film.title}
           </Link>
         ))}
       </ul>

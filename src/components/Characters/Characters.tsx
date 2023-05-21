@@ -5,8 +5,8 @@ import LoadingPage from "../Loader";
 
 interface Character {
   name: string;
-  height: string;
-  mass: string;
+  //height: string;
+  //mass: string;
   // Add more properties as needed
 }
 
@@ -48,8 +48,6 @@ const CharactersPage: React.FC = () => {
       {characters.map((character, index) => (
         <div key={index}>
           <h3>{character.name}</h3>
-          <p>{`Height: ${character.height}`}</p>
-          <p>{`Mass: ${character.mass}`}</p>
         </div>
       ))}
     </StyledCharacters>
