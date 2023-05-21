@@ -9,7 +9,7 @@ MVP:
 - Create a navigation to switch between pages in the application. (done)
 - Use a Loader component when loading movie data. (done)
 - When a user clicks on a movie, a single movie page should display data from that movie. (done)
-- Create a page to list characters. This page should be empty to start with, and only get characters added as the user clicks into the different movies. This page should only list characters belonging to movies that the user has clicked on. (done)(todo: add something other then undefined-messege)
+- Create a page to list characters. This page should be empty to start with, and only get characters added as the user clicks into the different movies. This page should only list characters belonging to movies that the user has clicked on. (done)
 
 Bonus
 

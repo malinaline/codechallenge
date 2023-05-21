@@ -10,13 +10,14 @@ export const StyledCharacters = styled.div`
   }
 
   p {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   a {
     text-decoration: none;
-    font-size: 30px;
-    color: var(--spaceCadet);
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--black);
     cursor: pointer;
   }
 `;

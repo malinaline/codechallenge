@@ -25,7 +25,7 @@ const Spinner = styled.div`
   animation: ${spinAnimation} 1s linear infinite;
 `;
 
-const LoadingPage: React.FC = () => {
+const LoadingSpinner: React.FC = () => {
   return (
     <LoadingWrapper>
       <Spinner />
@@ -33,4 +33,7 @@ const LoadingPage: React.FC = () => {
   );
 };
 
-export default LoadingPage;
+export default LoadingSpinner;
+
+// flytta styling till egen komponent
+// gör spinner till en egen komponent och importera till nopage

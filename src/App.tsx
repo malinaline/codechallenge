@@ -1,6 +1,6 @@
 import Home from "./pages/home";
 import NoPage from "./pages/nopage";
-import CharactersNoPage from "./CharactersNopage";
+import CharactersNoPage from "./charactersnopage";
 import NavigationDesktop from "./components/Navigation/Navigation";
 import MovieDetailsPage from "./components/DetailsMovie/MovieDetails";
 import CharactersPage from "./components/Characters/Characters";

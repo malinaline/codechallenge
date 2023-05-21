@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { MoviesStyled } from "./Movies.styled";
-import LoadingPage from "../Loader";
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 export interface Film {
   title: string;
@@ -34,10 +34,11 @@ const Movies = () => {
 
   return (
     <MoviesStyled>
-      <h1>Movies</h1>
-      <h2>Please select a title below to show more details</h2>
+      <h1>Starwars Movie App</h1>
+      <h2>Movies</h2>
+      <h3>Please select a title below to show more details</h3>
       {isLoading ? (
-        <LoadingPage /> // Render the loading component if isLoading is true
+        <LoadingSpinner /> // Render the loading component if isLoading is true
       ) : (
         <ul>
           {films.map((film) => (

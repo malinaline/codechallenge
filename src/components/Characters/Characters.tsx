@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { StyledCharacters } from "./StyledCharacters";
 import { Link } from "react-router-dom";
-import LoadingPage from "../Loader";
+import LoadingPage from "../LoadingSpinner/LoadingSpinner";
 
 interface Character {
   name: string;
@@ -48,7 +48,7 @@ const CharactersPage: React.FC = () => {
       <h2>Characters</h2>
       {characters.map((character, index) => (
         <div key={index}>
-          <h3>{character.name}</h3>
+          <p>{character.name}</p>
         </div>
       ))}
       {/* Link to CharactersPage */}

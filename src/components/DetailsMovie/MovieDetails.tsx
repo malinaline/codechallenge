@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { StyledDetails } from "./StyledDetails";
-import LoadingPage from "../Loader";
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 interface Movie {
   title: string;
@@ -33,7 +33,7 @@ const MovieDetailsPage: React.FC = () => {
   }, [id]);
 
   if (isLoading) {
-    return <LoadingPage />;
+    return <LoadingSpinner />;
   }
 
   if (!movie) {
@@ -42,8 +42,8 @@ const MovieDetailsPage: React.FC = () => {
 
   return (
     <StyledDetails>
-      <h1>{`${movie.title}`}</h1>
-      <p>{`Episode ID: ${movie.episode_id}`}</p>
+      <h2>{`${movie.title}`}</h2>
+      <p>{`Episode: ${movie.episode_id}`}</p>
       <p>{`Director: ${movie.director}`}</p>
       <p>{`Release Date: ${movie.release_date}`}</p>
 
