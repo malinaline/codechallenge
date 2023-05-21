@@ -1,9 +1,8 @@
-# :rocket: Starwars Movies
+# :rocket: Starwars App - Code Challenge
 
 This is a simple web application using the SWAPI API
 
 MVP:
-
 - The app should be responsive and styled with a mobile first approach.
 - Create a page to display movies with live data fetched from the Star Wars API.
 - Create a navigation to switch between pages in the application.
@@ -15,7 +14,8 @@ MVP:
 
 - [@malinaline](https://www.github.com/malinaline)
 
-## Screenshot![screenshot](https://github.com/malinaline/stampen/assets/75427957/615a8b7b-6b2a-4622-9c88-72b7b0369d72)
+## Screenshot![screenshot]
+![mobileview](https://github.com/malinaline/stampen/assets/75427957/88648261-6ca2-43db-a957-b89955548d31)
 
 
 ## Run Locally
