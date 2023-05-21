@@ -3,6 +3,7 @@
 This is a simple web application using the SWAPI API
 
 MVP:
+
 - The app should be responsive and styled with a mobile first approach.
 - Create a page to display movies with live data fetched from the Star Wars API.
 - Create a navigation to switch between pages in the application.
@@ -15,8 +16,8 @@ MVP:
 - [@malinaline](https://www.github.com/malinaline)
 
 ## Screenshot![screenshot]
-![mobileview](https://github.com/malinaline/stampen/assets/75427957/88648261-6ca2-43db-a957-b89955548d31)
 
+![mobileview](https://github.com/malinaline/stampen/assets/75427957/88648261-6ca2-43db-a957-b89955548d31)
 
 ## Run Locally
 
@@ -48,4 +49,6 @@ Start on Localhost
 
 **Client:** React, TypesScript, Styled Components
 
-## Related
+## Resources
+
+Swapi - starwars API - https://swapi.dev/
