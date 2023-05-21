@@ -4,7 +4,6 @@ import NavigationDesktop from "./components/Navigation/Navigation";
 import MovieDetailsPage from "./components/DetailsMovie/MovieDetails";
 import CharactersPage from "./components/Characters/Characters";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 //usehistory
 
 function App() {

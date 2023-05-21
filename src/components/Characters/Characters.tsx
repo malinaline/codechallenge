@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { StyledCharacters } from "./StyledCharacters";
+import LoadingPage from "../Loader";
 
 interface Character {
   name: string;
@@ -11,6 +13,7 @@ interface Character {
 const CharactersPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [characters, setCharacters] = useState<Character[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchCharacters = async () => {
@@ -22,6 +25,7 @@ const CharactersPage: React.FC = () => {
         );
         const characterData = await Promise.all(characterPromises);
         setCharacters(characterData);
+        setIsLoading(false);
       } catch (error) {
         console.error("Error fetching characters:", error);
       }
@@ -30,12 +34,16 @@ const CharactersPage: React.FC = () => {
     fetchCharacters();
   }, [id]);
 
+  if (isLoading) {
+    return <LoadingPage />;
+  }
+
   if (characters.length === 0) {
-    return <div>Loading characters...</div>;
+    return <div>Error fetching characters.</div>;
   }
 
   return (
-    <div>
+    <StyledCharacters>
       <h2>Characters</h2>
       {characters.map((character, index) => (
         <div key={index}>
@@ -44,7 +52,7 @@ const CharactersPage: React.FC = () => {
           <p>{`Mass: ${character.mass}`}</p>
         </div>
       ))}
-    </div>
+    </StyledCharacters>
   );
 };
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { MoviesStyled} from "./Movies.styled";
+import { MoviesStyled } from "./Movies.styled";
 
 export interface Film {
   title: string;
@@ -44,8 +44,3 @@ const Movies = () => {
 };
 
 export default Movies;
-//lista på film (/movies), klicka på den och få information
-// /movies/:id
-// /movies/:id/actor
-
-//skapa characte

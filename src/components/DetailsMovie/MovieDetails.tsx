@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { StyledDetails } from "./StyledDetails";
+import LoadingPage from "../Loader";
 
 interface Movie {
   title: string;
@@ -14,6 +15,7 @@ interface Movie {
 const MovieDetailsPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [movie, setMovie] = useState<Movie | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -21,6 +23,7 @@ const MovieDetailsPage: React.FC = () => {
         const response = await fetch(`https://swapi.dev/api/films/${id}`);
         const movieData = await response.json();
         setMovie(movieData);
+        setIsLoading(false);
       } catch (error) {
         console.error("Error fetching movie details:", error);
       }
@@ -29,8 +32,12 @@ const MovieDetailsPage: React.FC = () => {
     fetchMovieDetails();
   }, [id]);
 
+  if (isLoading) {
+    return <LoadingPage />;
+  }
+
   if (!movie) {
-    return <div>Loading...</div>;
+    return <div>Error fetching movie details.</div>;
   }
 
   return (
@@ -41,7 +48,7 @@ const MovieDetailsPage: React.FC = () => {
       <p>{`Release Date: ${movie.release_date}`}</p>
 
       {/* Link to CharactersPage */}
-      <Link to={`/${id}/characters`}> Show characters</Link>
+      <Link to={`/${id}/characters`}> Show characters ➝</Link>
     </StyledDetails>
   );
 };
