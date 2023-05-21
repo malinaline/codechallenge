@@ -37,7 +37,7 @@ function Navigation() {
             <NavLink to="/">Home</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to="/search">Search</NavLink>
+            <NavLink to="/about">About</NavLink>
           </NavItem>
         </NavList>
       </WrapperDesktop>
@@ -50,7 +50,7 @@ function Navigation() {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/info" onClick={closeMobileMenu}>
+              <NavLink to="/about" onClick={closeMobileMenu}>
                 About
               </NavLink>
             </NavItem>

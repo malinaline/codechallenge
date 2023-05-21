@@ -1,3 +1,4 @@
+import About from "./components/About/About";
 import Home from "./pages/home";
 import NoPage from "./pages/nopage";
 import CharactersNoPage from "./CharactersNopage";
@@ -17,10 +18,7 @@ function App() {
         <Route path="/:id" element={<MovieDetailsPage />}></Route>
         <Route path="/characters/" element={<CharactersNoPage />}></Route>
         <Route path="/:id/characters/" element={<CharactersPage />}></Route>
-        <Route
-          path="/Info"
-          element=<p>This App is using the Starwars API </p>
-        ></Route>
+        <Route path="/about" element={<About />}></Route>
         <Route path="/" element={<Home />}></Route>
       </Routes>
     </BrowserRouter>
