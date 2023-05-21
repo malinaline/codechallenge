@@ -35,8 +35,8 @@ const Movies = () => {
   return (
     <MoviesStyled>
       <h1>Starwars Movie App</h1>
-      <h2>Movies</h2>
-      <h3>Please select a title below to show details.</h3>
+      <h2>Films</h2>
+      <h3>Select a title below to show details</h3>
       {isLoading ? (
         <LoadingSpinner /> // Render the loading component if isLoading is true
       ) : (

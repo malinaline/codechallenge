@@ -5,7 +5,7 @@ export const AboutStyled = styled.div`
   padding-left: 10px;
 
   p {
-    font-size: 20px;
+    font-size: 40px;
     text-align: center;
   }
 `;

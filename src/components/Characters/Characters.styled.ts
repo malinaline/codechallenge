@@ -6,16 +6,20 @@ export const CharactersStyled = styled.div`
   text-align: center;
 
   h1 {
-    font-size: 40px;
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 35px;
   }
 
   p {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   a {
     text-decoration: none;
-    font-size: 15px;
+    font-size: 30px;
     font-weight: bold;
     color: var(--black);
     cursor: pointer;

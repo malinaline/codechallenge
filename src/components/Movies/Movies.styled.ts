@@ -6,12 +6,12 @@ export const MoviesStyled = styled.div`
   text-align: center;
 
   h1 {
-    font-size: 40px;
+    font-size: 60px;
     padding-bottom: 5px;
   }
 
   h2 {
-    font-size: 30px;
+    font-size: 40px;
   }
 
   p {
@@ -25,7 +25,7 @@ export const MoviesStyled = styled.div`
   }
   ul a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
     color: var(--spaceCadet);
     cursor: pointer;
   }

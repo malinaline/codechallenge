@@ -54,7 +54,7 @@ const CharactersPage: React.FC = () => {
         </div>
       ))}
       {/* Link to CharactersPage */}
-      <Link to={`/${id}`}> ← Back to Movie Details</Link>
+      <Link to={`/${id}`}> ← Back to Details</Link>
     </CharactersStyled>
   );
 };
