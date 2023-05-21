@@ -21,7 +21,7 @@ Bonus
 
 - [@malinaline](https://www.github.com/malinaline)
 
-## Screenshot![screenshot]
+## Screenshot
 
 ![mobileview](https://github.com/malinaline/stampen/assets/75427957/88648261-6ca2-43db-a957-b89955548d31)
 
