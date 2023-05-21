@@ -51,6 +51,10 @@ Start on Localhost
   npm start
 ```
 
+## Watch Live at Netlify
+
+https://starwarsmovieapp.netlify.app/
+
 ## Tech Stack
 
 **Client:** React, TypesScript, Styled Components
