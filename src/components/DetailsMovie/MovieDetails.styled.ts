@@ -12,8 +12,7 @@ export const DetailsStyled = styled.div`
   h2 {
     font-size: 35px;
   }
-ç
-  p {
+  ç p {
     font-size: 15px;
   }
 
