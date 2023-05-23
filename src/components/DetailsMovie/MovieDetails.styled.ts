@@ -6,7 +6,7 @@ export const DetailsStyled = styled.div`
   text-align: center;
 
   h1 {
-    font-size: 60px;
+    font-size: 50px;
   }
 
   h2 {

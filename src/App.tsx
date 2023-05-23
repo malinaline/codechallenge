@@ -1,12 +1,11 @@
 import About from "./components/About/About";
-import Home from "./pages/home";
-import NoPage from "./pages/nopage";
-import CharactersNoPage from "./CharactersNopage";
-import Navigation from "./components/Navigation/Navigation";
-import MovieDetailsPage from "./components/DetailsMovie/MovieDetails";
-import CharactersPage from "./components/Characters/Characters";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-//usehistory
+import CharactersPage from "./components/Characters/Characters";
+import CharactersNoPage from "./pages/charactersNopage";
+import Home from "./pages/home";
+import MovieDetailsPage from "./components/DetailsMovie/MovieDetails";
+import Navigation from "./components/Navigation/Navigation";
+import NoPage from "./pages/nopage";
 
 function App() {
   return (
