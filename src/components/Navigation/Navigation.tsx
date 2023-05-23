@@ -15,9 +15,6 @@ import {
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  // const { width } = useWindowSize();
-
-  //const isMobile = width < 1025;
 
   const closeMobileMenu = () => {
     setIsOpen(false);

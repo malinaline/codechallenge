@@ -62,5 +62,4 @@ Swapi - starwars API - https://swapi.dev/
 ## NPM - Dependencies
 
     react-router-dom
-    react-slugify
     types/styled-components

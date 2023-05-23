@@ -15,7 +15,7 @@ export interface Film {
 
 const Movies = () => {
   const [films, setFilms] = useState<Film[]>([]);
-  const [isLoading, setIsLoading] = useState(true); // Add a loading state
+  const [isLoading, setIsLoading] = useState(true); // Set isLoading to true by default
 
   useEffect(() => {
     const fetchFilms = async () => {
@@ -41,11 +41,16 @@ const Movies = () => {
         <LoadingSpinner /> // Render the loading component if isLoading is true
       ) : (
         <ul>
-          {films.map((film, index) => (
-            <Link key={film.episode_id} to={`${index + 1}`}>
-              {film.title}
-            </Link>
-          ))}
+          {films.map(
+            (
+              film,
+              index //
+            ) => (
+              <Link key={film.episode_id} to={`${index + 1}`}>
+                {film.title}
+              </Link>
+            )
+          )}
         </ul>
       )}
     </MoviesStyled>
